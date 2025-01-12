@@ -1,40 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# DevelopsToday Frontend
 
-## Getting Started
+DevelopsToday Frontend is a React-based frontend application designed to interact with the DevelopsToday backend. It provides a user interface for managing and displaying country data, game modes, and more. The project is built with Next.js and styled-components for fast and modern web development.
 
-First, run the development server:
+## Table of Contents
 
-```bash
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Available Scripts](#available-scripts)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/en/download/) (version >=14.x)
+- [npm](https://www.npmjs.com/get-npm)
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/renanbianchi/developstoday-frontend.git
+   cd developstoday-frontend
+
+    Install dependencies:
+
+npm install
+
+Create a .env.local file in the root directory and set up environment variables. See the Configuration section for details.
+
+Run the development server:
+
+    npm run dev
+
+    Open the app in your browser at http://localhost:3000.
+
+Configuration
+
+The .env.local file should contain the following environment variables:
+
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3002
+
+    NEXT_PUBLIC_API_BASE_URL: The base URL for the backend API. This is used to make API requests from the frontend.
+
+Usage
+
+Once the development server is running, you can interact with the application at http://localhost:3000.
+
+Example workflows:
+
+    View a list of countries by accessing the main page.
+    Navigate to a specific country’s details using its code and name in the URL (e.g., /country/US/United-States).
+
+Available Scripts
+
+Here are the most common scripts you can run in this project:
+
+    Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the project for production:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+npm run build
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Start the production server:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+npm start
